@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Caroussel.scss";
 
-import chevron from "../../../assets/chevron.svg";
+import chevron from "../../../assets/icones/chevron.svg";
 
 function Caroussel() {
   return (

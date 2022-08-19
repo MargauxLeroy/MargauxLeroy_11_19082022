@@ -2,35 +2,40 @@ import React from "react";
 
 import "./Expand.scss";
 
-import chevron from "../../../assets/chevron.svg";
+import chevron from "../../../assets/icones/chevron.svg";
 
-function Expand() {
+type ExpandProps = { title: string; content: string; isOpen: string };
+
+function Expand(props: ExpandProps) {
   const isDescription = true;
+  // var isOpen = props.isOpen;
 
   return (
-    <div className="expand">
-      <div className="title">
-        <h3>Description</h3>
+    <div className="expand" data-is-open={props.isOpen}>
+      <div
+        className="title"
+        onClick={() => {
+          console.log("toto");
+          // isOpen = !isOpen;
+        }}
+      >
+        <h3>{props.title}</h3>
         <img src={chevron} alt="Chevron" />
       </div>
 
-      <div className="content">
-        {isDescription ? (
-          <p>
-            Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer
-            l'été et à côté de nombreux bars et restaurants. Au cœur de Paris
-            avec 5 lignes de métro et de nombreux bus. Logement parfait pour les
-            voyageurs en solo et les voyageurs d'affaires. Vous êtes à1 station
-            de la gare de l'est (7 minutes à pied).
-          </p>
-        ) : (
-          <ul>
-            <li>Coucou</li>
-            <li>cava</li>
-            <li>très bien</li>
-          </ul>
-        )}
-      </div>
+      {props.isOpen && (
+        <div className="content">
+          {isDescription ? (
+            <p>{props.content}</p>
+          ) : (
+            <ul>
+              <li>Coucou</li>
+              <li>cava</li>
+              <li>très bien</li>
+            </ul>
+          )}
+        </div>
+      )}
     </div>
   );
 }

@@ -1,0 +1,21 @@
+footer {
+  background-color: black;
+  padding: 4em;
+  background-color: black;
+  padding: 4em;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    height: 40px;
+    fill: var(--white);
+  }
+
+  p {
+    font-size: calc(0.4em + 2vw);
+  }
+}

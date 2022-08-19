@@ -6,7 +6,7 @@ import "./Header.scss";
 
 function Header() {
   return (
-    <header>
+    <header className="content-layout">
       <img src={src} alt="Logo Kaza" />
       <ul>
         <li>

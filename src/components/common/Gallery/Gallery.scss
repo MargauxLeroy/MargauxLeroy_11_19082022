@@ -1,26 +1,24 @@
 .gallery-section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  row-gap: 2em;
-  column-gap: 2em;
+  row-gap: calc(1em + 1vw);
+  column-gap: calc(1em + 1vw);
 
   li {
-    flex: 1 0 auto;
     height: 16em;
-    // background-color: var(--main-color);
+    flex: 1 0 auto;
 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
     border-radius: 0.65em;
-
     overflow: hidden;
 
     a {
+      height: 100%;
       display: flex;
       align-items: end;
-      height: 100%;
       position: relative;
 
       h3 {
@@ -44,10 +42,10 @@
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   .gallery-section {
     border-radius: 25px;
     background-color: #f6f6f6;
-    padding: calc(2em + 2vw);
+    padding: calc(1em + 2vw);
   }
 }

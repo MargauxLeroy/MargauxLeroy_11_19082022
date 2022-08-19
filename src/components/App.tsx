@@ -1,51 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import "./App.scss";
 
 import Header from "./common/Header/Header";
-import FirstSection from "./home/FirstSection/FirstSection";
-import Gallery from "./home/Gallery/Gallery";
-
-import HousingPage from "./housing/Page";
-
-export type Housing = {
-  id: string;
-  title: string;
-  cover: string;
-  pictures: string[];
-  description: string;
-  host: {
-    name: string;
-    picture: string;
-  };
-  rating: string;
-  location: string;
-  equipments: string[];
-  tags: string[];
-};
-
-const fetchHousing = async (): Promise<Housing[]> => {
-  const data = await fetch("/logements.json");
-  const response = await data.json();
-
-  return response;
-};
+import Home from "./Home";
+import HousingPage from "./Housing";
+import About from "./About";
+import Footer from "./common/Footer/Footer";
+import Error404 from "./common/Error404/Error404";
 
 function App() {
-  const [housings, setHousings] = useState<Housing[]>([]);
-
-  useEffect(() => {
-    fetchHousing().then(setHousings);
-  }, [setHousings]);
-
-  console.log(housings);
-
   return (
     <div className="App">
       <Header />
-      <FirstSection />
-      <Gallery housings={housings} />
+      {/* <Home /> */}
       {/* <HousingPage /> */}
+      <About />
+      {/* <Error404 /> */}
+      <Footer />
     </div>
   );
 }

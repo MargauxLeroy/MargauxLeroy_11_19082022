@@ -1,20 +1,24 @@
+.first-section[data-is-dense="true"] {
+  height: 7em;
+}
+
+.first-section[data-is-dense="false"] {
+  height: 16em;
+}
+
 .first-section {
   display: flex;
   justify-content: center;
   align-items: center;
 
   position: relative;
-
-  height: 7em;
   padding: calc(1em + 1vw);
+  border-radius: calc(0.625em + 1vw);
+  overflow: hidden;
 
-  background-image: url("../../../assets/home_img.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
-  border-radius: calc(0.625em + 1vw);
-  overflow: hidden;
 
   h1 {
     font-size: calc(1em + 2vw);
@@ -34,7 +38,7 @@
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   .first-section {
     height: 14em;
 

@@ -2,8 +2,6 @@ import React from "react";
 
 import "./Rating.scss";
 
-import starIcon from "../../../assets/star.svg";
-
 const Star = (props: { isFilled: boolean }) => {
   return (
     <svg

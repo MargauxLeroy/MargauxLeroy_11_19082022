@@ -12,8 +12,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  padding: 1.25em;
-
   --main-color: #ff6060;
   --grey: #f6f6f6;
   --white: white;
@@ -21,8 +19,12 @@ body {
   color: var(--main-color);
 }
 
-@media (min-width: 800px) {
-  body {
+.content-layout {
+  padding: 1.25em;
+}
+
+@media (min-width: 1000px) {
+  .content-layout {
     padding: 2.5em 6.25em;
   }
 }

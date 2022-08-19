@@ -1,5 +1,5 @@
 import React from "react";
-import { Housing } from "../../App";
+import { Housing } from "../../Home";
 
 import "./Gallery.scss";
 

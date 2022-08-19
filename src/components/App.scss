@@ -1,5 +1,7 @@
-.App {
+.page-flex {
   display: flex;
   flex-direction: column;
-  row-gap: 2em;
+  row-gap: calc(1em + 1vw);
+
+  padding-top: 0;
 }
