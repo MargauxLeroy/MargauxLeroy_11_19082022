@@ -1,0 +1,51 @@
+.caroussel {
+  height: 16em;
+  background-color: green;
+  border-radius: 25px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+
+  position: relative;
+
+  .actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    > img:nth-child(1) {
+      transform: rotate(-90deg);
+    }
+
+    > img:nth-child(2) {
+      transform: rotate(90deg);
+    }
+
+    img {
+      height: 1.5em;
+    }
+  }
+
+  span {
+    position: absolute;
+    bottom: 5%;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 800px) {
+  .caroussel {
+    height: 26em;
+
+    .actions {
+      img {
+        height: 6.25em;
+      }
+    }
+  }
+}

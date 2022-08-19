@@ -1,0 +1,28 @@
+.housing-infos {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+
+  font-weight: 500;
+
+  h1 {
+    font-size: 1.125em;
+  }
+
+  h3 {
+    font-size: 0.875em;
+  }
+
+  ul {
+    display: flex;
+    column-gap: 0.5em;
+
+    li {
+      padding: 8px 32px;
+      background-color: var(--main-color);
+      border-radius: 8px;
+      color: var(--white);
+      font-size: 10px;
+    }
+  }
+}

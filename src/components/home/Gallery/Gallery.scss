@@ -1,16 +1,18 @@
 .gallery-section {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   row-gap: 2em;
   column-gap: 2em;
 
   li {
+    flex: 1 0 auto;
     height: 16em;
-    width: 100%;
-    min-width: 14em;
-    max-width: 24em;
+    // background-color: var(--main-color);
 
-    background-color: #ff6060;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
     border-radius: 0.65em;
 
     overflow: hidden;
@@ -23,7 +25,7 @@
 
       h3 {
         padding: 1.5em;
-        color: white;
+        color: var(--white);
 
         z-index: 1;
       }

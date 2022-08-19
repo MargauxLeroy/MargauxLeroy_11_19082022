@@ -1,6 +1,8 @@
 import React from "react";
-import src from "../assets/logo.svg";
-import "../styles/Header.scss";
+
+import src from "../../../assets/logo.svg";
+
+import "./Header.scss";
 
 function Header() {
   return (

@@ -1,0 +1,27 @@
+.expand {
+  .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    padding: 1em 1.5em;
+    border-radius: 12px;
+
+    z-index: 1;
+    position: relative;
+
+    h3 {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--white);
+    }
+  }
+
+  .content {
+    border-radius: 12px;
+    background-color: var(--grey);
+    padding: calc(1.5em + 5px) 1.5em 1.5em 1.5em;
+    transform: translateY(-10px);
+  }
+}

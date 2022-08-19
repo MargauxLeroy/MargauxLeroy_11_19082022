@@ -1,0 +1,16 @@
+.owner {
+  display: flex;
+  align-items: center;
+  column-gap: 1em;
+
+  img {
+    height: 32px;
+    width: 32px;
+    background-color: grey;
+    border-radius: 99px;
+  }
+
+  p {
+    text-align: right;
+  }
+}
