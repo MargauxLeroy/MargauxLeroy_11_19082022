@@ -1,0 +1,44 @@
+.first-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  height: 7em;
+  padding: calc(1em + 1vw);
+
+  background-image: url("../assets/home_img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border-radius: calc(0.625em + 1vw);
+  overflow: hidden;
+
+  h1 {
+    font-size: calc(1em + 2vw);
+    font-weight: 500;
+    color: white;
+    z-index: 1;
+  }
+
+  .gradient {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #000;
+    mix-blend-mode: darken;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: 800px) {
+  .first-section {
+    height: 14em;
+
+    h1 {
+      text-align: center;
+    }
+  }
+}
