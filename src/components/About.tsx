@@ -9,14 +9,14 @@ function About() {
   return (
     <div className="content-layout page-flex">
       <ImgBanner title="" image={aboutImage} isDense="false" />
-      <ul>
+      <ul className="page-flex">
         {values.map((value) => (
           <li>
             <Expand
               key={value.id}
               title={value.title}
               content={value.content}
-              isOpen="true"
+              isOpen={false}
             />
           </li>
         ))}

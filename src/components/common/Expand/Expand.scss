@@ -4,6 +4,12 @@
   }
 }
 
+.expand[data-is-open="true"] {
+  img {
+    transform: initial;
+  }
+}
+
 .expand {
   .title {
     display: flex;
@@ -24,12 +30,16 @@
       font-weight: 500;
       color: var(--white);
     }
+
+    img {
+      transition: transform 240ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
   }
 
   .content {
     border-radius: 12px;
     background-color: var(--grey);
     padding: calc(1.5em + 20px) 1.5em 1.5em 1.5em;
-    transform: translateY(-20px);
+    margin-top: -20px;
   }
 }

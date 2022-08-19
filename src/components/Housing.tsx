@@ -12,7 +12,7 @@ function HousingPage() {
     <div className="content-layout page-flex">
       <Caroussel />
       <HousingInfos />
-      <Expand title="Description" content="coucou" isOpen="true" />
+      <Expand title="Description" content="coucou" isOpen={true} />
       <div className="housing-infos">
         <HousingInfos />
         <div className="notes">

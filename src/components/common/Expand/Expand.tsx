@@ -1,29 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./Expand.scss";
 
 import chevron from "../../../assets/icones/chevron.svg";
 
-type ExpandProps = { title: string; content: string; isOpen: string };
+type ExpandProps = { title: string; content: string; isOpen: boolean };
 
 function Expand(props: ExpandProps) {
   const isDescription = true;
-  // var isOpen = props.isOpen;
+
+  const [isOpen, setIsOpen] = useState(props.isOpen);
 
   return (
-    <div className="expand" data-is-open={props.isOpen}>
+    <div className="expand" data-is-open={isOpen}>
       <div
         className="title"
         onClick={() => {
           console.log("toto");
-          // isOpen = !isOpen;
+          setIsOpen(!isOpen);
         }}
       >
         <h3>{props.title}</h3>
         <img src={chevron} alt="Chevron" />
       </div>
 
-      {props.isOpen && (
+      {isOpen && (
         <div className="content">
           {isDescription ? (
             <p>{props.content}</p>
