@@ -41,5 +41,11 @@
     background-color: var(--grey);
     padding: calc(1.5em + 20px) 1.5em 1.5em 1.5em;
     margin-top: -20px;
+
+    .equipements {
+      display: flex;
+      column-gap: 0.5em;
+      flex-direction: column;
+    }
   }
 }

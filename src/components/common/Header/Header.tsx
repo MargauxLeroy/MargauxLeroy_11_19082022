@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import src from "../../../assets/logo.svg";
 
@@ -7,13 +8,15 @@ import "./Header.scss";
 function Header() {
   return (
     <header className="content-layout">
-      <img src={src} alt="Logo Kaza" />
+      <Link to="/">
+        <img src={src} alt="Logo Kaza" />
+      </Link>
       <ul>
         <li>
-          <a href="#">Accueil</a>
+          <Link to="/">Accueil</Link>
         </li>
         <li>
-          <a href="#">À propos</a>
+          <Link to="/about">À propos</Link>
         </li>
       </ul>
     </header>

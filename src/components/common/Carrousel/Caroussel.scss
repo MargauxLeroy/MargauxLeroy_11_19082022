@@ -1,6 +1,5 @@
 .caroussel {
   height: 16em;
-  background-color: green;
   border-radius: 25px;
 
   display: flex;
@@ -8,6 +7,10 @@
   flex-direction: column;
   justify-content: center;
   padding: 24px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
   position: relative;
 

@@ -2,17 +2,22 @@ import React from "react";
 
 import "./ImgBanner.scss";
 
-// Questions : comment je met des valeurs optionnels ou pré-configurés ?
+// Questions : comment je met des valeurs optionnels (? nom pas le type)
+// Pré-configurés : dans la déconstruction des props de la fonction
 type PresentationImgProps = { title: string; image: string; isDense: string };
 
-function PresentationImg(props: PresentationImgProps) {
+function PresentationImg({
+  title,
+  image,
+  isDense = "true",
+}: PresentationImgProps) {
   return (
     <div
       className="first-section"
-      style={{ backgroundImage: `url("${props.image}")` }}
-      data-is-dense={props.isDense}
+      style={{ backgroundImage: `url("${image}")` }}
+      data-is-dense={isDense}
     >
-      <h1>{props.title}</h1>
+      <h1>{title}</h1>
     </div>
   );
 }

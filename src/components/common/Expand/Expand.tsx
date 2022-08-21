@@ -4,11 +4,13 @@ import "./Expand.scss";
 
 import chevron from "../../../assets/icones/chevron.svg";
 
-type ExpandProps = { title: string; content: string; isOpen: boolean };
+type ExpandProps = {
+  title: string;
+  content: string | string[];
+  isOpen: boolean;
+};
 
 function Expand(props: ExpandProps) {
-  const isDescription = true;
-
   const [isOpen, setIsOpen] = useState(props.isOpen);
 
   return (
@@ -26,14 +28,14 @@ function Expand(props: ExpandProps) {
 
       {isOpen && (
         <div className="content">
-          {isDescription ? (
-            <p>{props.content}</p>
-          ) : (
-            <ul>
-              <li>Coucou</li>
-              <li>cava</li>
-              <li>très bien</li>
+          {Array.isArray(props.content) ? (
+            <ul className="equipements">
+              {props.content.map((equipement) => (
+                <li key={equipement}>{equipement}</li>
+              ))}
             </ul>
+          ) : (
+            <p>{props.content}</p>
           )}
         </div>
       )}

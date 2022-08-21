@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Housing } from "../../Home";
 
 import "./Gallery.scss";
@@ -9,7 +10,12 @@ function Gallery(props: GalleryProps) {
   return (
     <ul className="gallery-section">
       {props.housings.map((housing) => (
-        <Thumb key={housing.id} label={housing.title} image={housing.cover} />
+        <Thumb
+          key={housing.id}
+          id={housing.id}
+          label={housing.title}
+          image={housing.cover}
+        />
       ))}
     </ul>
   );
@@ -17,15 +23,15 @@ function Gallery(props: GalleryProps) {
 
 export default Gallery;
 
-type ThumbProps = { label: string; image: string };
+type ThumbProps = { id: string; label: string; image: string };
 
-function Thumb({ label, image }: ThumbProps) {
+function Thumb({ label, image, id }: ThumbProps) {
   return (
     <li style={{ backgroundImage: `url("${image}")` }}>
-      <a href="#">
+      <Link to={`/housing/${id}`}>
         <h3>{label}</h3>
         <span className="gradient"></span>
-      </a>
+      </Link>
     </li>
   );
 }

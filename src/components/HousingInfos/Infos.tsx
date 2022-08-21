@@ -2,15 +2,23 @@ import React from "react";
 
 import "./Infos.scss";
 
-function HousingInfos() {
+type HousingInfosProps = {
+  title: string;
+  location: string;
+  tags: string[];
+};
+
+function HousingInfos(props: HousingInfosProps) {
   return (
     <div className="title">
-      <h2>Cozy loft on the Canal Saint-Martin</h2>
-      <h3>Paris, Île-de-France</h3>
+      <h2>{props.title}</h2>
+      <h3>{props.location}</h3>
       <ul>
-        <li>Cozy</li>
-        <li>Canal</li>
-        <li>Paris 10</li>
+        {props.tags.map((tag) => (
+          <li key={tag} className="tag">
+            {tag}
+          </li>
+        ))}
       </ul>
     </div>
   );

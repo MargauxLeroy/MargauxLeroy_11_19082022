@@ -12,13 +12,24 @@ const fetchHousing = async (): Promise<Housing[]> => {
   return response;
 };
 
-function Home() {
+const useHousings = () => {
   const [housings, setHousings] = useState<Housing[]>([]);
 
   useEffect(() => {
     fetchHousing().then(setHousings);
   }, [setHousings]);
 
+  return housings;
+};
+
+export const useHousing = (id: string) => {
+  const housings = useHousings();
+
+  return housings.find((housing) => housing.id === id);
+};
+
+function Home() {
+  const housings = useHousings();
   console.log(housings);
 
   return (
