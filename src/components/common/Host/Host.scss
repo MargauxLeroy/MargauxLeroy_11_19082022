@@ -4,8 +4,8 @@
   column-gap: 1em;
 
   img {
-    height: 32px;
-    width: 32px;
+    height: calc(24px + 2.5vw);
+    width: calc(24px + 2.5vw);
     // background-color: grey;
     border-radius: 99px;
   }

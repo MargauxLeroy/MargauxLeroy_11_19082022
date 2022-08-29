@@ -11,6 +11,10 @@
 }
 
 .expand {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
   .title {
     display: flex;
     flex-direction: row;
@@ -41,6 +45,7 @@
     background-color: var(--grey);
     padding: calc(1.5em + 20px) 1.5em 1.5em 1.5em;
     margin-top: -20px;
+    flex: 1;
 
     .equipements {
       display: flex;

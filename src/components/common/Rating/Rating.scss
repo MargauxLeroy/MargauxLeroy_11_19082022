@@ -1,21 +1,17 @@
 .rating {
   display: flex;
-
-  img {
-    padding: 4px;
-  }
+  column-gap: 6px;
 
   svg {
-    height: 24px;
-    width: 24px;
-    padding: 4px;
+    height: calc(12px + 1.6vw);
+    width: calc(12px + 1.6vw);
   }
 
-  svg[data-isFilled="true"] {
-    fill: red;
+  svg[data-is-filled="true"] {
+    fill: var(--main-color);
   }
 
-  img[data-isFilled="false"] {
-    fill: blue;
+  svg[data-is-filled="false"] {
+    fill: var(--grey-dark);
   }
 }

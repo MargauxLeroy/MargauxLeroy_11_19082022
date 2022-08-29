@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-import ImgBanner from "./common/ImgBanner/ImgBanner";
-import Gallery from "./common/Gallery/Gallery";
+import ImgBanner from "../components/common/ImgBanner/ImgBanner";
+import Gallery from "../components/common/Gallery/Gallery";
 
 import homeImage from "../assets/images/home_img.jpg";
 
@@ -12,24 +12,23 @@ const fetchHousing = async (): Promise<Housing[]> => {
   return response;
 };
 
-const useHousings = () => {
+export const useHousings = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [housings, setHousings] = useState<Housing[]>([]);
 
   useEffect(() => {
-    fetchHousing().then(setHousings);
+    setTimeout(() => {
+      fetchHousing()
+        .then(setHousings)
+        .finally(() => setIsLoading(false));
+    }, 300);
   }, [setHousings]);
 
-  return housings;
-};
-
-export const useHousing = (id: string) => {
-  const housings = useHousings();
-
-  return housings.find((housing) => housing.id === id);
+  return { housings, isLoading };
 };
 
 function Home() {
-  const housings = useHousings();
+  const { housings } = useHousings();
   console.log(housings);
 
   return (

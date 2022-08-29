@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Host.scss";
 
-type HostType = { name: string; picture: string };
+export type HostType = { name: string; picture: string };
 
 function Host({ host }: { host: HostType }) {
   const [firstName, lastName] = host.name.split(" ");

@@ -28,11 +28,12 @@
     }
 
     img {
-      height: 1.5em;
+      height: calc(2em + 4vw);
     }
   }
 
   span {
+    display: none;
     position: absolute;
     bottom: 5%;
     color: var(--white);
@@ -45,10 +46,8 @@
   .caroussel {
     height: 26em;
 
-    .actions {
-      img {
-        height: 6.25em;
-      }
+    span {
+      display: initial;
     }
   }
 }

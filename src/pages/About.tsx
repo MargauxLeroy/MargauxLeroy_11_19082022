@@ -1,7 +1,7 @@
 import React from "react";
 
-import ImgBanner from "./common/ImgBanner/ImgBanner";
-import Expand from "./common/Expand/Expand";
+import ImgBanner from "../components/common/ImgBanner/ImgBanner";
+import Expand from "../components/common/Expand/Expand";
 
 import aboutImage from "../assets/images/about_img.jpg";
 
@@ -11,9 +11,9 @@ function About() {
       <ImgBanner title="" image={aboutImage} isDense="false" />
       <ul className="page-flex">
         {values.map((value) => (
-          <li>
+          <li key={value.id}>
             <Expand
-              key={value.id}
+              // key={value.id}
               title={value.title}
               content={value.content}
               isOpen={false}

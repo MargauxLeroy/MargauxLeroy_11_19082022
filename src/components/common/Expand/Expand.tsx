@@ -10,32 +10,37 @@ type ExpandProps = {
   isOpen: boolean;
 };
 
-function Expand(props: ExpandProps) {
-  const [isOpen, setIsOpen] = useState(props.isOpen);
+function Expand({
+  title,
+  content,
+  isOpen: defaultIsOpen = false,
+}: ExpandProps) {
+  const [isOpen, setIsOpen] = useState(defaultIsOpen);
+
+  // TODO: details ? balise html
 
   return (
     <div className="expand" data-is-open={isOpen}>
       <div
         className="title"
         onClick={() => {
-          console.log("toto");
           setIsOpen(!isOpen);
         }}
       >
-        <h3>{props.title}</h3>
+        <h3>{title}</h3>
         <img src={chevron} alt="Chevron" />
       </div>
 
       {isOpen && (
         <div className="content">
-          {Array.isArray(props.content) ? (
+          {Array.isArray(content) ? (
             <ul className="equipements">
-              {props.content.map((equipement) => (
+              {content.map((equipement) => (
                 <li key={equipement}>{equipement}</li>
               ))}
             </ul>
           ) : (
-            <p>{props.content}</p>
+            <p>{content}</p>
           )}
         </div>
       )}

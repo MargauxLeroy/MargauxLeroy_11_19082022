@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Housing } from "../../Home";
+import { Housing } from "../../../pages/Home";
 
 import "./Gallery.scss";
 
