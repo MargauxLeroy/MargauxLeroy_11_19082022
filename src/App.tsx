@@ -4,11 +4,12 @@ import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom";
 import "./App.scss";
 
 import Header from "./components/common/Header/Header";
+import Footer from "./components/common/Footer/Footer";
+
 import Home from "./pages/Home";
 import HousingPage from "./pages/Housing";
 import About from "./pages/About";
-import Footer from "./components/common/Footer/Footer";
-import Error404 from "./components/common/Error404/Error404";
+import Error404 from "./pages/Error404";
 
 function App() {
   return (
@@ -33,15 +34,11 @@ function App() {
 export default App;
 
 function EntryPoint(props: any) {
-  console.log(props);
-
   return (
     <div className="App">
       <Header />
       <Outlet />
       <Footer />
-
-      {/* <Error404 /> */}
     </div>
   );
 }

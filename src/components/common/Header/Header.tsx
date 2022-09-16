@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import src from "../../../assets/logo.svg";
 
@@ -13,10 +13,24 @@ function Header() {
       </Link>
       <ul>
         <li>
-          <Link to="/">Accueil</Link>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "navlink-active" : "navlink-inactive"
+            }
+          >
+            Accueil
+          </NavLink>
         </li>
         <li>
-          <Link to="/about">À propos</Link>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? "navlink-active" : "navlink-inactive"
+            }
+          >
+            À propos
+          </NavLink>
         </li>
       </ul>
     </header>

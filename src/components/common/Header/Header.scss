@@ -13,15 +13,18 @@ header {
     column-gap: calc(1em + 3vw);
 
     li a {
-      text-decoration: underline;
       font-size: 0.75em;
       font-weight: 500;
       text-transform: uppercase;
     }
+
+    li .navlink-active {
+      text-decoration: underline;
+    }
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
   header {
     img {
       height: 4.25em;

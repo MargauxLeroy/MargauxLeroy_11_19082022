@@ -14,8 +14,21 @@
   column-gap: 2em;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
   .housing-expands {
     flex-direction: row;
+  }
+}
+
+/// ERROR 404
+.error-404 {
+  text-align: center;
+  height: 54vh;
+  justify-content: center;
+
+  p {
+    font-size: calc(3em + 14vw);
+    font-weight: 700;
+    line-height: 1;
   }
 }

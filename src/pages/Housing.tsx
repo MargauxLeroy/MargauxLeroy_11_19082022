@@ -1,22 +1,29 @@
 import React from "react";
 import { Navigate, useParams } from "react-router-dom";
+import { useHousings } from "../utils/states";
 
 import Caroussel from "../components/common/Carrousel/Carrousel";
 import Expand from "../components/common/Expand/Expand";
-import { useHousings } from "./Home";
-
 import HousingInfos from "../components/HousingInfos/Infos";
 
 const useHousing = (id: string) => {
   const { housings, isLoading } = useHousings();
 
   return {
+    /// Renvoit le logement si l'id en paramètre
+    /// correspond à l'id d'un des logements existants
     housing: housings.find((housing) => housing.id === id),
     isLoading,
   };
 };
 
+// TODO: js doc
+/**
+ *
+ * @returns
+ */
 function HousingPage() {
+  /// On récupère l'id dans l'URL
   const params = useParams();
   const housingId = params.housingId;
 
@@ -26,8 +33,7 @@ function HousingPage() {
 
   const { housing, isLoading } = useHousing(housingId);
 
-  if (isLoading) return <div style={{ height: "100vh" }}></div>; // TODO: shimmer ? ou div full height
-
+  if (isLoading) return <div style={{ height: "100vh" }}></div>;
   if (!housing) return <Navigate to={"/404"} />;
 
   return (
@@ -46,12 +52,12 @@ function HousingPage() {
         <Expand
           title="Description"
           content={housing.description}
-          isOpen={true}
+          isOpen={false}
         />
         <Expand
           title="Équipements"
           content={housing.equipments}
-          isOpen={true}
+          isOpen={false}
         />
       </div>
     </div>

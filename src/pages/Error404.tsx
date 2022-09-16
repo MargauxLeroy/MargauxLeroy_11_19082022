@@ -1,13 +1,12 @@
 import React from "react";
-
-import "./Error404.scss";
+import { Link } from "react-router-dom";
 
 function Error404() {
   return (
     <div className="content-layout page-flex error-404">
       <p>404</p>
       <span>Oups! La page que vous demandez n'existe pas.</span>
-      <a href="#">Retourner sur la page d’accueil</a>
+      <Link to="/">Retourner sur la page d’accueil</Link>
     </div>
   );
 }

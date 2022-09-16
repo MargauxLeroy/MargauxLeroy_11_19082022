@@ -1,29 +1,36 @@
-.caroussel {
+.carousel {
   height: 16em;
   border-radius: 25px;
-
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  padding: 24px;
-
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
+  flex-wrap: nowrap;
+  overflow: hidden;
   position: relative;
+
+  .carousel-item {
+    min-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 500ms ease-in-out;
+  }
 
   .actions {
     width: 100%;
     display: flex;
     justify-content: space-between;
 
-    > img:nth-child(1) {
+    position: absolute;
+    z-index: 99;
+    top: 37%;
+
+    > button {
+      padding: 16px;
+    }
+
+    > button:nth-child(1) img {
       transform: rotate(-90deg);
     }
 
-    > img:nth-child(2) {
+    > button:nth-child(2) img {
       transform: rotate(90deg);
     }
 
@@ -35,15 +42,17 @@
   span {
     display: none;
     position: absolute;
+    z-index: 99;
     bottom: 5%;
+    left: 48%;
     color: var(--white);
     font-size: 18px;
     font-weight: 500;
   }
 }
 
-@media (min-width: 1000px) {
-  .caroussel {
+@media (min-width: 800px) {
+  .carousel {
     height: 26em;
 
     span {

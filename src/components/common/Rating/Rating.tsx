@@ -27,7 +27,7 @@ function Rating(props: { rating: string }) {
   return (
     <div className="rating">
       {list.map((_, index) => (
-        <Star isFilled={index < ratingNumber} />
+        <Star key={index} isFilled={index < ratingNumber} />
       ))}
     </div>
   );

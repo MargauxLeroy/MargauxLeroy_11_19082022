@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import ImgBanner from "../components/common/ImgBanner/ImgBanner";
 import Expand from "../components/common/Expand/Expand";
@@ -6,6 +6,10 @@ import Expand from "../components/common/Expand/Expand";
 import aboutImage from "../assets/images/about_img.jpg";
 
 function About() {
+  useEffect(() => {
+    document.title = "Kaza: À propos";
+  }, []);
+
   return (
     <div className="content-layout page-flex">
       <ImgBanner title="" image={aboutImage} isDense="false" />
@@ -13,7 +17,7 @@ function About() {
         {values.map((value) => (
           <li key={value.id}>
             <Expand
-              // key={value.id}
+              key={value.id}
               title={value.title}
               content={value.content}
               isOpen={false}

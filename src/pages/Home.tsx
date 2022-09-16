@@ -1,35 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import ImgBanner from "../components/common/ImgBanner/ImgBanner";
 import Gallery from "../components/common/Gallery/Gallery";
 
 import homeImage from "../assets/images/home_img.jpg";
-
-const fetchHousing = async (): Promise<Housing[]> => {
-  const data = await fetch("/logements.json");
-  const response = await data.json();
-
-  return response;
-};
-
-export const useHousings = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [housings, setHousings] = useState<Housing[]>([]);
-
-  useEffect(() => {
-    setTimeout(() => {
-      fetchHousing()
-        .then(setHousings)
-        .finally(() => setIsLoading(false));
-    }, 300);
-  }, [setHousings]);
-
-  return { housings, isLoading };
-};
+import { useHousings } from "../utils/states";
 
 function Home() {
   const { housings } = useHousings();
-  console.log(housings);
+
+  useEffect(() => {
+    document.title = `Kaza`;
+  }, []);
 
   return (
     <div className="content-layout page-flex">
@@ -44,19 +26,3 @@ function Home() {
 }
 
 export default Home;
-
-export type Housing = {
-  id: string;
-  title: string;
-  cover: string;
-  pictures: string[];
-  description: string;
-  host: {
-    name: string;
-    picture: string;
-  };
-  rating: string;
-  location: string;
-  equipments: string[];
-  tags: string[];
-};
