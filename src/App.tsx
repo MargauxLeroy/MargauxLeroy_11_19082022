@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom";
 
 import "./App.scss";
 
-import Header from "./components/common/Header/Header";
-import Footer from "./components/common/Footer/Footer";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 import Home from "./pages/Home";
 import HousingPage from "./pages/Housing";
@@ -33,7 +33,7 @@ function App() {
 
 export default App;
 
-function EntryPoint(props: any) {
+function EntryPoint() {
   return (
     <div className="App">
       <Header />

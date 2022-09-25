@@ -20,16 +20,6 @@ body {
   color: var(--main-color);
 }
 
-.content-layout {
-  padding: 1.25em;
-}
-
-@media (min-width: 800px) {
-  .content-layout {
-    padding: 2.5em 6.25em;
-  }
-}
-
 a {
   text-decoration: none;
   color: var(--main-color);

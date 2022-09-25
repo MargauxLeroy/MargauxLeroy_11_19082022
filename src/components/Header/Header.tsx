@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
-import src from "../../../assets/logo.svg";
+import src from "../../assets/logo.svg";
 
 import "./Header.scss";
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./Expand.scss";
 
-import chevron from "../../../assets/icones/chevron.svg";
+import chevron from "../../assets/icones/chevron.svg";
 
 type ExpandProps = {
   title: string;

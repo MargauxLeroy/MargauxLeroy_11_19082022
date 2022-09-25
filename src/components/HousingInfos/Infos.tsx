@@ -1,6 +1,6 @@
 import React from "react";
-import Host, { HostType } from "../common/Host/Host";
-import Rating from "../common/Rating/Rating";
+import Host, { HostType } from "../Host/Host";
+import Rating from "../Rating/Rating";
 
 import "./Infos.scss";
 

@@ -1,3 +1,13 @@
+.content-layout {
+  padding: 1.25em;
+}
+
+@media (min-width: 800px) {
+  .content-layout {
+    padding: 2.5em 6.25em;
+  }
+}
+
 .page-flex {
   display: flex;
   flex-direction: column;
@@ -5,7 +15,6 @@
 
   padding-top: 0;
 }
-
 /// Housing Page
 .housing-expands {
   display: flex;

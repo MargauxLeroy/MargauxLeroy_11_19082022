@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
-import ImgBanner from "../components/common/ImgBanner/ImgBanner";
-import Expand from "../components/common/Expand/Expand";
+import ImgBanner from "../components/ImgBanner/ImgBanner";
+import Expand from "../components/Expand/Expand";
 
 import aboutImage from "../assets/images/about_img.jpg";
 

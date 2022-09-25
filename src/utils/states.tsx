@@ -8,8 +8,7 @@ export const fetchHousing = async (): Promise<Housing[]> => {
   return response;
 };
 
-/// Fonction de récupération
-/// et de mise à jour des données
+/// Fonction de récupération et de mise à jour des données
 export const useHousings = () => {
   const [housings, setHousings] = useState<Housing[]>([]);
   const [isLoading, setIsLoading] = useState(true);

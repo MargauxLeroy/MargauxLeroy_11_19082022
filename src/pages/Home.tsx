@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
-import ImgBanner from "../components/common/ImgBanner/ImgBanner";
-import Gallery from "../components/common/Gallery/Gallery";
+import ImgBanner from "../components/ImgBanner/ImgBanner";
+import Gallery from "../components/Gallery/Gallery";
 
 import homeImage from "../assets/images/home_img.jpg";
 import { useHousings } from "../utils/states";

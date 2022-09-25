@@ -2,8 +2,8 @@ import React from "react";
 import { Navigate, useParams } from "react-router-dom";
 import { useHousings } from "../utils/states";
 
-import Caroussel from "../components/common/Carrousel/Carrousel";
-import Expand from "../components/common/Expand/Expand";
+import Caroussel from "../components/Carrousel/Carrousel";
+import Expand from "../components/Expand/Expand";
 import HousingInfos from "../components/HousingInfos/Infos";
 
 const useHousing = (id: string) => {
@@ -17,18 +17,13 @@ const useHousing = (id: string) => {
   };
 };
 
-// TODO: js doc
-/**
- *
- * @returns
- */
 function HousingPage() {
   /// On récupère l'id dans l'URL
   const params = useParams();
   const housingId = params.housingId;
 
   if (!housingId) {
-    throw new Error("This component need housingId as url param");
+    throw new Error("This component need an housingId as url param");
   }
 
   const { housing, isLoading } = useHousing(housingId);

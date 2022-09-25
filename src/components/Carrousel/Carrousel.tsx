@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./Caroussel.scss";
 
-import chevron from "../../../assets/icones/chevron.svg";
+import chevron from "../../assets/icones/chevron.svg";
 
 type Props = { pictures: string[] };
 
