@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import ImgBanner from "../components/ImgBanner/ImgBanner";
 import Gallery from "../components/Gallery/Gallery";
@@ -8,10 +8,6 @@ import { useHousings } from "../utils/states";
 
 function Home() {
   const { housings } = useHousings();
-
-  useEffect(() => {
-    document.title = `Kaza`;
-  }, []);
 
   return (
     <div className="content-layout page-flex">

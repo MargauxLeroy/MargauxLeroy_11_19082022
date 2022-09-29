@@ -32,12 +32,16 @@
 /// ERROR 404
 .error-404 {
   text-align: center;
-  height: 54vh;
+  height: calc(70vh - 4vw);
   justify-content: center;
 
   p {
     font-size: calc(3em + 14vw);
     font-weight: 700;
     line-height: 1;
+  }
+
+  a {
+    text-decoration: underline;
   }
 }

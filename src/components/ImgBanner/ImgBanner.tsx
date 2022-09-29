@@ -2,8 +2,6 @@ import React from "react";
 
 import "./ImgBanner.scss";
 
-// Questions : comment je met des valeurs optionnels (? nom pas le type)
-// Pré-configurés : dans la déconstruction des props de la fonction
 type PresentationImgProps = { title: string; image: string; isDense: string };
 
 function PresentationImg({

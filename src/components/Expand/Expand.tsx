@@ -17,16 +17,9 @@ function Expand({
 }: ExpandProps) {
   const [isOpen, setIsOpen] = useState(defaultIsOpen);
 
-  // TODO: details ? balise html
-
   return (
     <div className="expand" data-is-open={isOpen}>
-      <div
-        className="title"
-        onClick={() => {
-          setIsOpen(!isOpen);
-        }}
-      >
+      <div className="title" onClick={() => setIsOpen(!isOpen)}>
         <h3>{title}</h3>
         <img src={chevron} alt="Chevron" />
       </div>

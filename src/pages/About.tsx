@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import ImgBanner from "../components/ImgBanner/ImgBanner";
 import Expand from "../components/Expand/Expand";
@@ -6,10 +6,6 @@ import Expand from "../components/Expand/Expand";
 import aboutImage from "../assets/images/about_img.jpg";
 
 function About() {
-  useEffect(() => {
-    document.title = "Kaza: À propos";
-  }, []);
-
   return (
     <div className="content-layout page-flex">
       <ImgBanner title="" image={aboutImage} isDense="false" />

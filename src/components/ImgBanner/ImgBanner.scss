@@ -1,5 +1,5 @@
 .first-section[data-is-dense="true"] {
-  height: 7em;
+  height: calc(7em + 4vw);
 }
 
 .first-section[data-is-dense="false"] {
